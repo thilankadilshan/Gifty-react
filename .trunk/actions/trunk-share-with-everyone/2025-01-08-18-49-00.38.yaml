@@ -1,0 +1,15 @@
+action_id: trunk-share-with-everyone
+date: 2025-01-08 18:49:00
+run: trunk config share --notify --allow-daemon-start=false
+run_from: ""
+trigger: schedule 24h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-share-with-everyone'. See .trunk\out\U7EFj.yaml for details.
+  error_path: C:\Users\user\Documents\New folder\coursework-group_24\.trunk\out\U7EFj.yaml
+timestamp: 1736362140
+full_timestamp:
+  nanos: 38548000
+  seconds: 1736362140
+trunk_version: 1.22.8

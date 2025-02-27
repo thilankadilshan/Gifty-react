@@ -1,0 +1,53 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Install frontend dependencies
+      - name: Install Frontend Dependencies
+        run: npm install
+        working-directory: E-commerce/frontend
+
+      - name: Lint Frontend Code
+        run: npm run lint
+        working-directory: E-commerce/frontend
+
+      - name: Run Frontend Tests
+        run: npm test
+        working-directory: E-commerce/frontend
+
+      # Install backend dependencies
+      - name: Install Backend Dependencies
+        run: npm install
+        working-directory: E-commerce/backend
+
+      - name: Lint Backend Code
+        run: npm run lint
+        working-directory: E-commerce/backend
+
+      - name: Run Backend Tests
+        run: npm test
+        working-directory: E-commerce/backend
+
+      # Install admin dependencies
+      - name: Install Admin Dependencies
+        run: npm install
+        working-directory: E-commerce/admin
+
+      - name: Lint Admin Code
+        run: npm run lint
+        working-directory: E-commerce/admin
+
+      - name: Run Admin Tests
+        run: npm test
+        working-directory: E-commerce/admin

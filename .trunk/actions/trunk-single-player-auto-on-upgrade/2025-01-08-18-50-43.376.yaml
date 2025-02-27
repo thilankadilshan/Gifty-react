@@ -1,0 +1,15 @@
+action_id: trunk-single-player-auto-on-upgrade
+date: 2025-01-08 18:50:43
+run: trunk on-upgrade --single-player-only -n --no-progress --allow-daemon-start=false --print-summary --scope=check,plugins,runtimes,tools
+run_from: ""
+trigger: schedule 24h+5m
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-single-player-auto-on-upgrade'. See .trunk\out\csWh4.yaml for details.
+  error_path: C:\Users\user\Documents\New folder\coursework-group_24\.trunk\out\csWh4.yaml
+timestamp: 1736362243
+full_timestamp:
+  nanos: 376244000
+  seconds: 1736362243
+trunk_version: 1.22.8

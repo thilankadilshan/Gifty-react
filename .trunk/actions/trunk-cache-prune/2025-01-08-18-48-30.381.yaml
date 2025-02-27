@@ -1,0 +1,15 @@
+action_id: trunk-cache-prune
+date: 2025-01-08 18:48:30
+run: trunk cache prune --allow-daemon-start=false
+run_from: ""
+trigger: schedule 24h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-cache-prune'. See .trunk\out\ct0JC.yaml for details.
+  error_path: C:\Users\user\Documents\New folder\coursework-group_24\.trunk\out\ct0JC.yaml
+timestamp: 1736362110
+full_timestamp:
+  nanos: 381039000
+  seconds: 1736362110
+trunk_version: 1.22.8
